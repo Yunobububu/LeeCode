@@ -1,4 +1,4 @@
-//swap a&b without template
+//swap a&b without temp
 #include <stdio.h>
 main()
 {
