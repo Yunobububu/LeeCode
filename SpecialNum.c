@@ -16,5 +16,6 @@ int main()
         SpecialNum^=*(Pnum+i);
     }
     printf("The special number is: %d\n",SpecialNum);
+    free(Pnum);
     return 0;
 }
