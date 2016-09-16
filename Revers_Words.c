@@ -12,6 +12,8 @@ main()
 }
 Reverse_String(char *s)
 {
+    if(!s||!*s)
+        return s;
     char *p,*q;
     p=s;
     q=s;
