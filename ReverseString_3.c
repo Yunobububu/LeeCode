@@ -6,8 +6,8 @@ void main()
     char str[20];
     printf("Please input the String\n");
     gets(str);
-    //Reverse_String2(str);
-    Reverse_String3(str,0,strlen(str));
+    Reverse_String2(str);
+    //Reverse_String3(str,0,strlen(str));
     puts(str);
     return 0;
 }
@@ -31,11 +31,11 @@ void main()
     return s;
 
 }
-char *Reverse_String2(char *p)//use temp var
+Reverse_String2(char *p)//use temp var
 {
     char *s,*q,temp;
-    *s=*p;
-    *q=*p;
+    s=p;
+    q=p;
     while(*(p+1)!='\0')
     {
         q++;
@@ -43,15 +43,17 @@ char *Reverse_String2(char *p)//use temp var
     }
     while(q>s)
     {
-        *q=temp;
-        *q=*s;
-        *s=temp;
+        temp=*q;
+        *q--=*s;
+        *s++=temp;
     }
     return s;
 }
-Reverse_String3(char *p,left,right)
+Reverse_String3(char *p,int left,int right)
 {
     char temp;
+    char *s;
+    *s=*p;
 
     if(left>=right)
         return;
@@ -59,6 +61,6 @@ Reverse_String3(char *p,left,right)
     s[left]=temp;
     s[left]=s[right];
     s[right]=temp;
-    Reverse_String(p,left++,right--);
+    Reverse_String3(s,left++,right--);
 
 }
