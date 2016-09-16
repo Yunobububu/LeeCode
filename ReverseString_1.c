@@ -1,4 +1,4 @@
-//print a string in the reverse way
+//print a string in a reverse way
 #include<stdio.h>
 main()
 {
