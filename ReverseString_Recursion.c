@@ -1,4 +1,4 @@
-//Reverse the string end with the"#"£¬use the method of Recursion
+//Reverse the string end with the"#" use the method of Recursion
 #include<stdio.h>
 main()
 {
