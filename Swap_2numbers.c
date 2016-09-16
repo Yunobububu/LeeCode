@@ -1,4 +1,4 @@
-//swap a&b without temp
+//swap a&b in different ways temp XOR 
 #include <stdio.h>
 
 
