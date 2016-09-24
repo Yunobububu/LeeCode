@@ -1,5 +1,7 @@
 #include<stdio.h>
-main()
+
+
+void main()
 {
     char *s[100]={0};
     char *t[100]={0};
@@ -7,13 +9,13 @@ main()
     gets(t);
     canConstruct(s,t);
 }
-bool canXonstruct(char* ransomNote,char* magazine)
+ canConstruct(char *ransomNote,char *magazine)
 {
-    int i=0,j=0,lens1,lesn2;
-    char *c[250]={0};
-    while(*(mangazine+i))
+    int i=0,j=0,lens1=0,lens2=0;
+    char c[30]={0};
+    while(*(magazine+i))
     {
-        c[*(mangazine+i)]=c[*(mangazine)]+1;
+        c[*(magazine+i)-96]=c[*(magazine+i)-96]+1;
         i++;
         lens1++;
     }
@@ -22,23 +24,19 @@ bool canXonstruct(char* ransomNote,char* magazine)
         j++;
         lens2++;
     }
-    if((lens1>lens2)||(lens2==0))
+    if((lens1<lens2)||(lens1==0))
         return false;
-    if(lens1==0)
+    if(lens2==0)
         return true;
-    int i=0;
-        while(((c[*(ransomNote+i)])!=0)&&(i<lens1))
-            {
-                c[*(ransomNote+i)]=c[*(ransomNote+i)]-1;
-                i++;
-            }
-        if(i==lens1)
-            return true;
-        else
-            return false;
-
-
-
-
+    i=0;
+    while(((c[*(ransomNote+i)])!=0)&&(i<lens1))
+        {
+            c[*(ransomNote+i)]=c[*(ransomNote+i)]-1;
+            i++;
+        }
+    if(i==lens2)
+        return true;
+    else
+        return false;
 
 }
