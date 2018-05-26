@@ -1,4 +1,6 @@
-package Leecode;
+package Leecode.ImpInJava;
+
+import Leecode.ImpInJava.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
