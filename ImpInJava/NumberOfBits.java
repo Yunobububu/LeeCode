@@ -1,6 +1,6 @@
 package Leecode.ImpInJava;
 
-public class Solution {
+public class NumberOfBits {
     // you need to treat n as an unsigned value
     public int hammingWeight(int  n) {
         int num=0;

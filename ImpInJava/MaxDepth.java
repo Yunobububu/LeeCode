@@ -9,7 +9,7 @@ package Leecode.ImpInJava;
  *     TreeNode(int x) { val = x; }
  * }
  */
-public class Solution {
+public class MaxDepth {
     public int maxDepth(TreeNode root) {
         if(root==null)
             return 0;

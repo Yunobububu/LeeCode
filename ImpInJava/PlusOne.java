@@ -1,6 +1,6 @@
 package Leecode.ImpInJava;
 
-public class Solution {
+public class PlusOne {
     public int[] plusOne(int[] digits) {
         int n=digits.length,k=0;
         int i=n-1;

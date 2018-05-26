@@ -2,7 +2,7 @@ package Leecode.ImpInJava;
 
 //House Robber
 //when num={};num.length error!!!how to solve it?
-public  class Test{
+public  class HouseRobber {
 	public static void main(String[] args){
 
 		int[] num={12,34,2,12,4,5};

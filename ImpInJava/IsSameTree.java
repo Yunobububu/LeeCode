@@ -9,7 +9,7 @@ package Leecode.ImpInJava;
  *     TreeNode(int x) { val = x; }
  * }
  */
-public class Solution {
+public class IsSameTree {
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if(p==null&&q==null)
         return true;
