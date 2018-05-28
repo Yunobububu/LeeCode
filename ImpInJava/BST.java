@@ -4,9 +4,10 @@ import Leecode.ImpInJava.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class BST {
-    private static List<Integer> list = new ArrayList<>();
+    static List<Integer> list = new ArrayList<>();
     public static void main(String[] args){
         int[] array = {6,3,5,7,8};
         TreeNode root = buildBST(array);
@@ -20,10 +21,12 @@ public class BST {
         System.out.println("BST root的值: " + root.val);
         //前序遍历BST
         //preOrderTraversal(root);
+        preOrderTraversal(root);
+        preOrderTraversalWithoutRecursive(root);
         System.out.println("BST前序遍历：" + list);
         //后序遍历BST
-        postOrderTraversal(root);
-        System.out.println("BST后序遍历：" + list);
+        //postOrderTraversal(root);
+        //System.out.println("BST后序遍历：" + list);
 
 
     }
@@ -104,12 +107,29 @@ public class BST {
         }
         return min;
     }
+    //BST非递归前序遍历
+    public static void preOrderTraversalWithoutRecursive(TreeNode root){
+        if(root == null){ return;}
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        while(!stack.isEmpty()){
+            TreeNode node = stack.pop();
+            list.add(node.val);
+            if(node.right != null){ stack.push(node.right);}
+            if(node.left != null){ stack.push(node.left);}
+        }
+    }
     //BST非递归中序遍历
     public static void inOrderTraversalWithoutRecursive(TreeNode root){
-        if(root == null){ return;}
-        while(root != null){
-
+        if(root == null){return ;}
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        while(!stack.isEmpty()){
+            TreeNode node = stack.pop();
+            if(node.right != null){ stack.push(node.right);}
+            if(node.left != null){ stack.push(node.left);}
         }
+
     }
 
 
