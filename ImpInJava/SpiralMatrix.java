@@ -13,9 +13,9 @@ public class SpiralMatrix{
 		if(matrix == null || matrix.length == 0){return list;}
 		int start = 0;
 		int rows = matrix.length;
-		int columons = matrix[0].length;
-		while(rows > start * 2 && columons > start * 2){
-			execute(matrix,rows,columons,start);
+		int columns = matrix[0].length;
+		while(rows > start * 2 && columns > start * 2){
+			execute(matrix,rows,columns,start);
 			start++;
 		}
 		return list;
