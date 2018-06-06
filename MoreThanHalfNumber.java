@@ -13,6 +13,19 @@ public class MoreThanHalfNumber {
         System.out.println(checkMoreThanHalf(array,1));
 
     }
+    /*
+    *
+    *
+    **/
+    public static int moreThanHalfNumberTwo(){
+        return 0;
+    }
+    /*
+    *
+    * Method ①:基于快速排序的partition,根据partition算法,当partition后返回index前的值小于array[index]
+    * partition后的值大于array[index]的值.所以如果数组存在大于数组一半长度的值,那么array[mid]的值就是要求的值,
+    * 根据partition返回的值循环partition,直到partition返回的值为mid
+    * */
     public static int moreThanHalfNumber(int[] array){
         int mid = array.length >> 1;
         int endIndex = array.length - 1;
